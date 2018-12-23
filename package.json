@@ -1,0 +1,28 @@
+{
+
+    "name": " bot.js",
+
+    "version": "2.1.0",
+
+    "description": "-- AWESOMENESS --",
+
+    "main": " bot.js",
+
+    "scripts": {
+
+      "start": "node wtf.js"
+
+
+    },
+
+    "dependencies": {
+        "discord.js": "^11.3.2"
+        },
+
+    "engines": {
+
+      "node": "8.4.0"
+
+    }
+
+  }
