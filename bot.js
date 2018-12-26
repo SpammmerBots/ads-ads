@@ -149,5 +149,62 @@ msg.delete();////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-Qua
       message.channel.send(`**لقد تم ارسال هذه الرسالة الى ${message.guild.members.filter(m => m.roles.get(role.id)).size} عضو**`);////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
     }
 });////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
+
+client.on('message', message => {
+    if(!message.channel.guild) return;
+if(message.content.startsWith('.abcPro')) {
+if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let copy = "- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼";
+let request = `Requested By ${message.author.username}`;
+if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
+msg.react('✅')
+.then(() => msg.react('❌'))
+.then(() =>msg.react('✅'))
+
+let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
+let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
+let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
+let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
+reaction1.on("collect", r => {
+message.channel.send(`**☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو **`).then(m => m.delete(5000));
+message.guild.members.forEach(m => {
+var bc = new
+Discord.RichEmbed()
+.setColor('RANDOM')
+.setTitle(':anger_right: BroadCast :anger_right:')
+.addField(':rose: Server', message.guild.name)
+.addField(':speaking_head: Sender', message.author.username)
+.addField(':love_letter: Message', args)
+.setThumbnail('https://cdn.pg.sa/hjDfaHOwgb.png')
+.setFooter(copy, client.user.avatarURL);
+m.send({ embed: bc })
+msg.delete();
+})
+})
+reaction2.on("collect", r => {
+message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
+msg.delete();
+})
+})
+}
+})
+
+///
+client.on('message', message => {
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('.aballserver')){
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('**جار ارسال الرسالة الي 3 سرفرمال **  :white_check_mark:')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
+
+
+
+
 client.login(process.env.BOT_TOKEN); ////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
 
