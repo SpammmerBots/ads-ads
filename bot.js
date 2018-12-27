@@ -155,7 +155,6 @@ msg.delete();////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-Qua
 
 
 ////role bc
- var prefix = ".a" ;////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
    
    client.on('message' , message => {////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
 
