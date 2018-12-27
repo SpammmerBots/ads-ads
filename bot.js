@@ -9,7 +9,7 @@ const prefix = '.a'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame("g!Help - For Help");
+client.user.setGame("Mal Team");
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -36,6 +36,7 @@ client.user.setGame("g!Help - For Help");
 /////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
 /////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661/////////////
 /////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#
+
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "BC")) {
