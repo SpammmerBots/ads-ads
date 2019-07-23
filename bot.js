@@ -107,7 +107,7 @@ EmbedBc.on("collect", r => {////////////////////////////By:- Mál ,ϻά𝔥𝔪�
 
  
 
-message.channel.send(`**:thumbsup:  تم ارسال الرساله بنجاح**`).then(m => m.delete(5000));////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
+message.channel.send(`**Done Sender Msg <:Cyd:591293203961872395>**`).then(m => m.delete(5000));////////////////////////////By:- Mál ,ϻά𝔥𝔪𝔬𝔲𝓓-QuaStyle≽ܫ≼#5661
 
 message.guild.members.forEach(m => {
 
